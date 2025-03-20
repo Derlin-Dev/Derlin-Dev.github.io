@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* Estilos Generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1117; /* Fondo oscuro */
+    color: #c9d1d9; /* Texto claro */
+    text-align: center;
+}
+
+/* Header */
+header {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 10px 0;
+    color: #58a6ff; /* Azul claro */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin: 10px 0;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Secciones */
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #161b22; /* Fondo oscuro para secciones */
+    border-radius: 0px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos de Sección */
+h2 {
+    font-size: 2em;
+    color: #58a6ff; /* Azul claro */
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.p1 {
+    text-align: center;
+}
+
+.about {
+    color: #ffffff; /* Blanco para texto */
+}
+
+/* Badges */
+.badges img {
+    margin: 5px;
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.badges img:hover {
+    transform: scale(1.1);
+}
+
+/* Proyectos */
+.projects {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.project-card {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el contenido de manera uniforme */
+    align-items: center;
+    margin: 20px;
+    background-color: #21262d;
+    border-radius: 0px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    min-height: 200px; /* Ajusta este valor según necesites */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    padding: 20px; /* Para dar más espacio dentro de la tarjeta */
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    color: #ffffff; /* Blanco */
+    margin: 10px;
+}
+
+.project-card p {
+    flex-grow: 1; /* Hace que el párrafo ocupe el espacio disponible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(94, 2, 53, 0.404);
+}
+
+/* Sección de Redes Sociales */
+.contact-media {
+    text-align: center;
+    margin: 40px auto; /* Asegura que se centre */
+    max-width: 800px; /* Limita el ancho */
+}
+
+.contact-media h2 {
+    font-size: 2em;
+    color: #58a6ff; /* Azul claro */
+    margin-bottom: 20px;
+}
+
+.contact-media ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra los elementos */
+}
+
+.contact-media ul li {
+    margin: 0 15px;
+}
+
+.contact-media ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #c9d1d9; /* Gris claro */
+    transition: color 0.3s;
+}
+
+.contact-media ul li a:hover {
+    color: #58a6ff; /* Azul claro */
+}
+
+.contact-media ul li a img {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.contact-media ul li a img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #0d1117; /* Fondo oscuro */
+    color: #58a6ff; /* Azul claro */
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Contador de Visitantes */
+footer p {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+/* Imagen de Pie de Página */
+footer img {
+    margin-top: 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+footer img:hover {
+    opacity: 1;
+}
+
+/* Estilo para el botón de descarga del CV */
+.cv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #144379; /* Azul claro */
+    color: #ffffff;
+    border: 2px solid #144379; /* Borde azul claro */
+    border-radius: 0px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    margin-top: 20px;
+}
+
+/* Efecto cuando el botón es hover */
+.cv-button:hover {
+    background-color: #215cb4; /* Azul más oscuro */
+    color: #170d0f; /* Fondo oscuro */
+    border-color: #215cb4; /* Borde azul más oscuro */
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(94, 2, 53, 0.39);
+}
+
+.cv-button:active {
+    transform: scale(1);
+}
+
+

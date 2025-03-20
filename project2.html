@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📦API DE PRATAFORMA DE BLOGS</title>
+    <link rel="stylesheet" href="/style_projects.css">
+</head>
+<body>
+    <header>
+        <img src="https://capsule-render.vercel.app/api?type=waving&color=00bfbf&height=120&section=header" alt="Header">
+        <div class="container">
+            <h1>API DE PRATAFORMA DE BLOGS</h1>
+        </div>
+    </header>
+    
+    <section class="about-project">
+        <h2>👋 Sobre el proyecto</h2>
+        <p class="project-description">
+            Esta API proporciona funcionalidades para gestionar una plataforma de blogs. 
+            Permite la creación, edición y eliminación de publicaciones, comentarios y repuestas, autenticación basada en tokens.
+        </p>
+        
+        <div class="project-details">
+            <div class="detail">
+                <h3>Tecnologías Utilizadas</h3>
+                <ul>
+                    <li>☕️ Java 21 </li> 
+                    <li>🌱 Spring Boot</li>
+                    <li>🔐 Spring Security con JWT</li>
+                    <li>   Spring Cloud</li>
+                    <li>🐘 PostgreSQL</li>
+                    <li>🐳 Docker y Docker Compose</li>
+                    <li>📦 JPA/Hibernate</li>
+                </ul>
+            
+                <hr size="1px" color="white" />
+            
+                <h3>Funcionalidades</h3>
+                <ul>
+                    <li>Registro de usuarios</li>
+                    <li>Autenticación con JWT</li>
+                    <li>CRUD de publicaciones (Crear, Leer, Actualizar, Eliminar)</li>
+                    <li>CRUD de comentarios y repuestas.</li>
+                </ul>
+            
+                <hr size="1px" color="white" />
+        
+                <h3>Requisitos</h3>
+                <ul>
+                    <li>Tener instalado Java 17+</li>
+                    <li>Docker y Docker Compose</li>
+                    <li>PostgreSQL (opcional si se usa Docker)</li>
+                    <li>IntelliJ IDEA o VS Code</li>
+                </ul>
+            
+                <hr size="1px" color="white" />
+            
+                <h3>Instalación y Ejecución</h3>
+                <ol>
+                    <li>Clona el repositorio:
+                        <div class="code-block">
+                            <span class="code-text">git clone git clone https://github.com/Derlin-Dev/api-microservices-blogs.v2.git <br>api-microservices-blogs.v2</span>
+                            <button class="copy-button" onclick="copyToClipboard(this)">Copiar</button>
+                        </div>
+                    </li>
+                    <li>Construye y levanta los contenedores con Docker Compose:
+                        <div class="code-block">
+                            <span class="code-text">docker-compose up --build</span>
+                            <button class="copy-button" onclick="copyToClipboard(this)">Copiar</button>
+                        </div>
+                    </li>
+                    <li>Accede a la API en <code>http://localhost:8081</code> mediante la Api GateWay.</li>
+                </ol>
+            
+                <hr size="1px" color="white" />
+            
+                <h3>Variables de Entorno</h3>
+                <p>El archivo <code>docker-compose.yml</code> está configurado para tomar las siguientes variables de entorno:</p>
+                <ul>
+                    <li><code>JWT_SECRET</code>: Clave secreta para firmar los tokens JWT.</li>
+                    <li><code>DATABASE_URL</code>: URL de la base de datos PostgreSQL.</li>
+                </ul>
+            
+                <hr size="1px" color="white" />
+            
+                <h3>Endpoints</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Método</th>
+                            <th>URL</th>
+                            <th>Autorización</th>
+                            <th>Body (JSON)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Auth-service -->
+                        <tr>
+                            <td>POST</td>
+                            <td>/auth/signup</td>
+                            <td>No</td>
+                            <td>{ "userName": "derlin001", "password": "123456", "email": "derlin001@gmail.com", "roles": "USER" }</td>
+                        </tr>
+                        <tr>
+                            <td>POST</td>
+                            <td>/auth/login</td>
+                            <td>No</td>
+                            <td>{ "userName": "derlin001", "password": "123456" }</td>
+                        </tr>
+                        
+                        <!-- Post-services -->
+                        <tr>
+                            <td>GET</td>
+                            <td>/post/get</td>
+                            <td>No</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>GET</td>
+                            <td>/post/get/{id}</td>
+                            <td>No</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>POST</td>
+                            <td>/post/new</td>
+                            <td>Sí</td>
+                            <td>{ "titulo": "Introducción en Spring Boot", "contenido": "Este es un post para tener una introducción a Spring Boot", "tag": "Tech" }</td>
+                        </tr>
+                        <tr>
+                            <td>PUT</td>
+                            <td>/post/put/{id}</td>
+                            <td>Sí</td>
+                            <td>{ "titulo": "Introducción a Spring Boot 'Actualizado'", "contenido": "Spring Boot es un marco que simplifica la creación de aplicaciones Java...", "tag": "SpringBoot", "numeroDeCometarios": 0 }</td>
+                        </tr>
+                        <tr>
+                            <td>DELETE</td>
+                            <td>/post/delete/{id}</td>
+                            <td>Sí</td>
+                            <td>-</td>
+                        </tr>
+                        
+                        <!-- Comment-services -->
+                        <tr>
+                            <td>GET</td>
+                            <td>/comment/post/{id}</td>
+                            <td>No</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>GET</td>
+                            <td>/comment/user/{id}</td>
+                            <td>Sí</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>POST</td>
+                            <td>/comment/user/new</td>
+                            <td>Sí</td>
+                            <td>{ "userId": "4", "postId": "1", "comment": "Este es un comentario al post...." }</td>
+                        </tr>
+                        <tr>
+                            <td>PUT</td>
+                            <td>/comment/user/put/{id}</td>
+                            <td>Sí</td>
+                            <td>{ "comment": "Este es un comentario actualizado...." }</td>
+                        </tr>
+                        <tr>
+                            <td>DELETE</td>
+                            <td>/comment/user/delete/{id}</td>
+                            <td>Sí</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>POST</td>
+                            <td>/answers/new</td>
+                            <td>Sí</td>
+                            <td>{ "idUserComment": 7, "idUserAnswers": 5, "answers": "Esta es una respuesta al comentario 2.", "commentId": 4 }</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr size="1px" color="white" />
+                <p>Los endpoints que requieren autorización deben incluir el token JWT en el encabezado `Authorization` con el formato:</p>
+                <!--<a href="CV-Derlin_Ramon_Valera.pdf" download="documentation" class="button_doc">Download Documentation (PDF)</a>-->
+            </div>
+            
+        </div>
+    </section>
+    
+    
+    <section class="technologies">
+        <h2>🛠️ Tecnologias Usadas:</h2>
+        <div class="tech-badges">
+            <!-- Java 21 -->
+            <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white" alt="Java 21">
+
+            <!-- Spring Boot -->
+            <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot">
+
+            <!-- Spring Security con JWT -->
+            <img src="https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white" alt="Spring Security with JWT">
+
+            <!-- PostgreSQL -->
+            <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+
+            <!-- Docker -->
+            <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+
+            <!-- Docker Compose -->
+            <img src="https://img.shields.io/badge/Docker_Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker Compose">
+
+            <!-- JPA Hibernate -->
+            <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white" alt="JPA Hibernate">
+
+        </div>
+    </section>
+    
+    <section id="demo">
+        <div class="container">
+            <h2> 🎬 Repositorio en GitHub</h2>
+            <p>Puede ver la demostración en vivo o visitar el repositorio del proyecto a continuación:</p>
+            <a href="https://github.com/Derlin-Dev/api-microservices-blogs.v2" target="_blank" class="button">View Repository</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Derlin-Derv. All Rights Reserved.</p>
+        </div>
+        <img src="https://capsule-render.vercel.app/api?type=waving&color=00bfbf&height=120&section=footer" alt="Footer">
+    </footer>
+</body>
+<script>
+    function copyToClipboard(button) {
+        var text = button.previousElementSibling.textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            button.textContent = "Copiado!";
+            setTimeout(() => {
+                button.textContent = "Copiar";
+            }, 1500);
+        });
+    }
+</script>
+</html>
