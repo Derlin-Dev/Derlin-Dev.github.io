@@ -33,7 +33,7 @@ To view the portfolio, follow these steps:
 
 1. Clone the repository to your local machine:
    ```
-   git clone <repository-url>
+   git clone https://github.com/Derlin-Dev/Derlin-Dev.github.io.git
    ```
 
 2. Navigate to the project directory:
@@ -54,9 +54,9 @@ To view the portfolio, follow these steps:
 
 ## Author
 
-[Your Name]  
-[Your Email]  
-[Your LinkedIn Profile] (optional)  
-[Your GitHub Profile] (optional)  
+[Derlin R. Valera]  
+[Gmail d.valerapeguero@gmail.com]  
+[LinkedIn www.linkedin.com/in/derlin-v-peguero] (optional)  
+
 
 Feel free to reach out for any inquiries or collaborations!
