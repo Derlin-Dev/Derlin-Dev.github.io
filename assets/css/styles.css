@@ -109,8 +109,9 @@
   }
 
   #about p {
-    max-width: 800px;
+    /*max-width: 1200px;*/
     margin: 0 auto;
+    text-align: justify;
     font-size: 18px;
     line-height: 1.7;
     color: var(--text-secondary);
@@ -333,7 +334,7 @@
   
   /* ===== Educación ===== */
   #education {
-    padding: 60px 20px;
+    /*padding: 60px 20px;*/
     text-align: center;
   }
 
@@ -347,7 +348,7 @@
     list-style: none;
     padding: 0;
     display: block;
-    max-width: 800px;
+    /*max-width: 800px;*/
     margin: 0 auto;
     text-align: left;
     column-count: 2; 
