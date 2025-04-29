@@ -43,15 +43,15 @@
   }
 
   header h1 {
-    font-size: 70px;
+    font-size: 80px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   header h2 {
     font-size: 24px;
     font-weight: normal;
     color: var(--accent-light);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   /* ===== Perfil ===== */
@@ -74,7 +74,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
   }
   
   /* ===== Títulos ===== */
@@ -92,7 +92,6 @@
     font-size: 32px;
     color: var(--text-main);
     margin-bottom: 20px;
-    border-left: 5px solid var(--accent-light);
     padding-left: 15px;
   }
   
@@ -103,6 +102,18 @@
     background-color: var(--accent-light);
     margin-top: 10px;
     border-radius: 2px;
+  }
+  #about h3 {
+    text-align: center;
+    
+  }
+
+  #about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--text-secondary);
   }
   
   /* ===== Iconos Sociales ===== */
@@ -124,6 +135,7 @@
   
   .social-icons a:hover {
     color: var(--accent-light);
+    transform: scale(1.1);
   }
 
   .social-links {
@@ -153,7 +165,8 @@
   }
   
   .download-btn:hover {
-    background-color: var(--accent-hover);
+    background-color: var(--primary-medium);
+    animation: neonGlowSoft 2s infinite alternate;
     transform: translateY(-2px);
   }
   
@@ -218,6 +231,7 @@
   
   .project-card:hover {
     transform: translateY(-5px);
+    animation: neonGlowSoft 2s infinite alternate;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   }
   
@@ -322,22 +336,37 @@
     padding: 60px 20px;
     text-align: center;
   }
+
+  #education h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    position: relative;
+  }
   
   .education-list {
     list-style: none;
     padding: 0;
+    display: block;
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
+    column-count: 2; 
+  column-gap: 40px; 
   }
   
+  .education-list li {
+    margin-bottom: 10px;
+    text-align: left;
+    break-inside: avoid; 
+  }
+
   .education-item {
     background: var(--background-light);
     border-left: 4px solid var(--accent-strong);
     padding: 20px 30px;
     margin-bottom: 20px;
     border-radius: 0px;
-    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   }
   
   .education-item h4 {
@@ -403,3 +432,26 @@
     }
   }
   
+  /* Animación neón con sombras suaves */
+@keyframes neonGlowSoft {
+  0% {
+    box-shadow: 0 0 3px #ff00ff, 0 0 5px #ff00ff;
+    border-color: #ff00ff;
+  }
+  25% {
+    box-shadow: 0 0 3px #00ffff, 0 0 5px #00ffff;
+    border-color: #00ffff;
+  }
+  50% {
+    box-shadow: 0 0 3px #39ff14, 0 0 5px #39ff14;
+    border-color: #39ff14;
+  }
+  75% {
+    box-shadow: 0 0 3px #ffff00, 0 0 5px #ffff00;
+    border-color: #ffff00;
+  }
+  100% {
+    box-shadow: 0 0 3px #ff4500, 0 0 5px #ff4500;
+    border-color: #ff4500;
+  }
+}
