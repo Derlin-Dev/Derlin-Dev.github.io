@@ -11,14 +11,17 @@
     --primary-medium: #2c2c3e;
     --accent-light: #4cc9f0;
     --accent-hover: #4895ef;
-    --accent-strong: #4361ee;
+  
     --accent-strong-hover: #3a0ca3;
     --text-main: #f8f9fa;
     --text-secondary: #adb5bd;
     --text-dark: #fafafa;
-    --text-muted: #e8eef3;
+    
     --background-light: #1e1e2f;
     --border-light: #dee2e6;
+
+    --text-muted: #6c757d;
+    --accent-strong: #007bff;
   }
   
   /* ===== Estilos Generales ===== */
@@ -287,51 +290,47 @@
   
   /* ===== Skills ===== */
   #skills {
-    padding: 60px 20px;
     text-align: center;
+    padding: 60px 20px;
   }
-  
+
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
   }
-  
+
   .skill-card {
     background: var(--background-light);
-    border: 1px solid var(--border-light);
-    border-radius: 12px;
-    padding: 30px 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--accent-strong);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
+
   .skill-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: neonGlowSoft 2s infinite alternate;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
-  
+
   .skill-icon {
-    margin-bottom: 20px;
-    color: var(--accent-strong);
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    object-fit: cover;
   }
-  
+
   .skill-card h4 {
-    font-size: 22px;
-    margin-bottom: 15px;
+    font-size: 16px;
     color: var(--text-dark);
+    margin-top: 10px;
   }
-  
-  .skill-card ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .skill-card ul li {
-    margin-bottom: 8px;
-    color: var(--text-muted);
-  }
-  
+
   /* ===== Educación ===== */
   #education {
     /*padding: 60px 20px;*/
@@ -386,7 +385,31 @@
     font-size: 14px;
     color: var(--text-muted);
   }
-  
+
+  /* ===== certifcados ===== */
+  #certificates {
+    text-align: center;
+    padding: 60px 20px;
+}
+.swiper-container {
+  width: 80%; /* Ajusta el ancho del carrusel */
+  margin: 0 auto; /* Centra horizontalmente */
+  display: flex; /* Asegura que el contenido esté alineado */
+  justify-content: center; /* Centra el contenido dentro del contenedor */
+  align-items: center; /* Centra verticalmente si es necesario */
+  overflow: hidden; /* Oculta las imágenes que se salen del carrusel */
+  position: relative; /* Necesario para que Swiper funcione correctamente */
+}
+
+.swiper-slide img {
+  max-width: 100%; /* Limita el ancho máximo al contenedor */
+  max-height: 400px; /* Limita la altura máxima */
+  object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+  margin: auto; /* Centra la imagen dentro del carrusel */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
   /* ===== Footer ===== */
   footer {
     background-color: var(--primary-dark);
