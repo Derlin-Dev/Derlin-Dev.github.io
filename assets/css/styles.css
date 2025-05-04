@@ -404,10 +404,10 @@ main section ul li a:hover,
 .education-list {
   list-style: none;
   padding: 0;
-  display: block;
+  display: list-item;
   margin: 0 auto;
   text-align: left;
-  column-count: 3;
+  column-count: 1;
   column-gap: 20px;
 }
 
