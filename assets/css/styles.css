@@ -301,6 +301,19 @@
         }
 
 
+        /*Estatus al enviar el formulario*/
+        .form-status {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        }
+
+        .form-status.success {
+        color: #4CAF50;
+        }
+
+        .form-status.error {
+        color: #F44336;
+        }
 
 
         /* Experience section */

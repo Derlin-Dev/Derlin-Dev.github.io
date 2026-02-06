@@ -63,21 +63,60 @@
             });
         });
 
-     (function(){
-        emailjs.init("ZGAO7V0dT48MBvWAX"); // Lo obtienes desde EmailJS Dashboard
-      })();
-    
-      document.getElementById("contactForm").addEventListener("submit", function(e) {
-        e.preventDefault();
+    document.addEventListener("DOMContentLoaded", () => {
+    const parts = ["mailto:","d.valera", "peguero", "gmail", "com"];
 
-        const form = this;
-    
-        emailjs.sendForm("service_pl8h5dk", "template_81jtzok", this)
-          .then(function(response) {
-            alert("¡Correo enviado!");
+    const email = `${parts[0]}${parts[1]}${parts[2]}@${parts[3]}.${parts[4]}`;
+
+    const emailLink = document.getElementById("emailLink");
+
+    if (!emailLink) {
+        console.error("emailLink no encontrado en el DOM");
+        return;
+    }
+
+    emailLink.href = `${email}`;
+    emailLink.setAttribute("aria-label", "Enviar correo");
+    });
+
+    //Mensaje al enviar el formulario y no recargar la pagina 
+    document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+    const status = document.getElementById("formStatus");
+
+    if (!form) return;
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault(); // 🚫 evita recarga
+
+        status.textContent = "Enviando...";
+        status.className = "form-status";
+
+        const data = new FormData(form);
+
+        try {
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+            "Accept": "application/json"
+            }
+        });
+
+        if (response.ok) {
+            status.textContent = "✅ Mensaje enviado correctamente. ¡Gracias!";
+            status.classList.add("success");
             form.reset();
-          }, function(error) {
-            alert("Hubo un error al enviar el correo.");
-            console.log(error);
-          });
-      });
+        } else {
+            const result = await response.json();
+            status.textContent = result.error || "❌ Ocurrió un error al enviar el mensaje.";
+            status.classList.add("error");
+        }
+
+        } catch (error) {
+        console.error(error);
+        status.textContent = "❌ Error de red. Intenta más tarde.";
+        status.classList.add("error");
+        }
+    });
+    });
