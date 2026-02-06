@@ -263,6 +263,48 @@
 
     close.onclick = () => modal.style.display = "none";
     modal.onclick = () => modal.style.display = "none";
+
+        //Mensaje al enviar el formulario y no recargar la pagina 
+    document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+    const status = document.getElementById("formStatus");
+
+    if (!form) return;
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault(); // 🚫 evita recarga
+
+        status.textContent = "Enviando...";
+        status.className = "form-status";
+
+        const data = new FormData(form);
+
+        try {
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+            "Accept": "application/json"
+            }
+        });
+
+        if (response.ok) {
+            status.textContent = "✅ Mensaje enviado correctamente. ¡Gracias!";
+            status.classList.add("success");
+            form.reset();
+        } else {
+            const result = await response.json();
+            status.textContent = result.error || "❌ Ocurrió un error al enviar el mensaje.";
+            status.classList.add("error");
+        }
+
+        } catch (error) {
+        console.error(error);
+        status.textContent = "❌ Error de red. Intenta más tarde.";
+        status.classList.add("error");
+        }
+    });
+    });
     </script>
 
 </body>
