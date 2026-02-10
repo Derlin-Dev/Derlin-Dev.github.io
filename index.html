@@ -12,21 +12,24 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <a href="./assets/util/CV_Derlin R. Valera Peguero.pdf" download class="download-cv-btn">
-                        <i class="fas fa-download"></i> Descargar CV
-                    </a>
+                   <h1>DERLIN-DEV.COM</h1>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#about">Sobre mí</a></li>
-                    <li><a href="#educacion">Educacion</a></li>
-                    <li><a href="#badges">Insignias y Certificados</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#about" data-i18n="nav.about">Sobre mí</a></li>
+                    <li><a href="#educacion" data-i18n="nav.education"> Educacion</a></li>
+                    <li><a href="#badges" data-i18n="nav.badges">Insignias y Certificados</a></li>
+                    <li><a href="#skills" data-i18n="nav.skills">Habilidades</a></li>
+                    <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
                 </ul>
                 <button class="theme-toggle" id="themeToggle">
                     <i class="fas fa-moon"></i>
                 </button>
+
+                <select id="langSwitcher" class="lang-switcher">
+                    <option value="es">🇩🇴 ES</option>
+                    <option value="en">🇺🇸 EN</option>
+                </select>
             </nav>
         </div>
     </header>
@@ -38,7 +41,7 @@
                 <div class="profile-card">
                     <img src="./assets/images/img.png" alt="Profile Image" class="profile-img">
                     <h1 class="profile-name">Derlin R. Valera</h1>
-                    <p class="profile-title">ING. DE SOFWARE // DESARROLLADOR BACKEND</p>
+                    <p class="profile-title" data-i18n="profile.title">ING. DE SOFWARE // DESARROLLADOR BACKEND</p>
                     
                     <div class="social-links">
                         <a href="https://github.com/Derlin-Dev" target="_blank"><i class="fab fa-github"></i></a>
@@ -50,45 +53,53 @@
                 <!-- Columna derecha -->
                 <div class="content">
                     <section id="about" data-aos="fade-up">
-                        <h2>Acerca de mí</h2><br>
+                        <h2 data-i18n="about.title">Acerca de mí</h2><br>
                         <div class="about-text">
-                            <p>Desarrollador Backend | Java | Spring Boot | Microservicios | SQL Server | PostgreSQL | Docker | Git y GitHub</p><br>
-                            <p>Mi nombre es <strong>Derlin R.</strong> Estudiante de Ingeniería de Software, apasionado por el desarrollo backend y la arquitectura de software. 
+                            <p data-i18n="about.stack">Desarrollador Backend | Java | Spring Boot | Microservicios | SQL Server | PostgreSQL | Docker | Git y GitHub</p><br>
+                            <p data-i18n="about.description">Mi nombre es <strong>Derlin R.</strong> Estudiante de Ingeniería de Software, apasionado por el desarrollo backend y la arquitectura de software. 
                             Manejo Java, Spring Boot y diseño de microservicios, con conocimiento en APIs escalables, Spring cloud, autenticación JWT y PostgreSQL. 
                             Conocimientos básicos en Docker y despliegue. 
                             Busco iniciar en roles de backend para seguir aprendiendo sobre computación en la nube, desarrollo de micrservicios y DevOps.
                             </p><br>
                             <p class="p1">
-                            Siempre en busca de nuevos desafíos.
+                            <a href="./assets/util/CV_Derlin R. Valera Peguero.pdf" download class="download-cv-btn" data-i18n="about.downloadCv">
+                                <i class="fas fa-download"></i> Descargar CV
+                            </a>
                             </p>
                         </div>
                     </section>
 
                     <section id="educacion">
-                        <h2>Educacion</h2>
+                        <h2 data-i18n="education.title">Educacion</h2>
                         <div class="timeline">
                             <div class="timeline-item">
-                                <div class="timeline-date">2024 - Presente</div>
-                                <h3 class="timeline-title">INGENIERIA DE SOFTWARE</h3>
-                                <p class="timeline-company">Universidad Tecnologica del Cibao Orientar(UTECO)</p>
-                            </div>
-                            
-                            <div class="timeline-item">
-                                <div class="timeline-date">Abril 2025 - Junio 2025 </div>
-                                <h3 class="timeline-title">ADMINISTRACIÓN DE BASES DE DATOS I</h3>
-                                <p class="timeline-company">Instituto Tecnologico de las Americas(ITLA)</p>
+                                <div class="timeline-date" data-i18n="education.div.1">2024 - Presente</div>
+                                <h3 class="timeline-title" data-i18n="education.h3.1">INGENIERIA DE SOFTWARE</h3>
+                                <p class="timeline-company" data-i18n="education.p.1">Universidad Tecnologica del Cibao Orientar(UTECO)</p>
                             </div>
 
                             <div class="timeline-item">
-                                <div class="timeline-date">Julio 2023 - Agosto 2023</div>
-                                <h3 class="timeline-title">TECNICO EN SOPORTE DE TIC</h3>
-                                <p class="timeline-company">Centro de Tecnología Universal(CENTU)</p>
+                                <div class="timeline-date" data-i18n="education.div.2">Diciembre 2025 - Febrero 2026 </div>
+                                <h3 class="timeline-title" data-i18n="education.h3.2">Fundamentos de Nube (Cloud Computing)</h3>
+                                <p class="timeline-company" data-i18n="education.p.2">Talento Digitar RD(INDOTE)</p>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-date" data-i18n="education.div.3">Abril 2025 - Junio 2025 </div>
+                                <h3 class="timeline-title" data-i18n="education.h3.3">ADMINISTRACIÓN DE BASES DE DATOS I</h3>
+                                <p class="timeline-company" data-i18n="education.p.3">Instituto Tecnologico de las Americas(ITLA)</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date" data-i18n="education.div.4">Julio 2023 - Agosto 2023</div>
+                                <h3 class="timeline-title" data-i18n="education.h3.4">TECNICO EN SOPORTE DE TIC</h3>
+                                <p class="timeline-company" data-i18n="education.p.4">Centro de Tecnología Universal(CENTU)</p>
                             </div>
                         </div>
                     </section>
 
                     <section id="badges">
-                        <h2>Insignias & Certificaciones</h2>
+                        <h2 data-i18n="nav.badges">Insignias & Certificaciones</h2>
 
                         <div class="badges-grid big-badges">
                             <a href="https://www.credly.com/badges/2b3a3c81-b4c7-4d84-be82-05c74ec19d57/public_url" target="_blank"">
@@ -108,7 +119,7 @@
                            
                             <a src="" target="">
                                 <div class="badge-item">
-                                    <img class="open-modal" src="assets/images/Certificados/Nube.png" alt="AWS Educate">
+                                    <img class="open-modal" src="assets/images/Certificados/Nube_Certificado.png" alt="AWS Educate">
                                     <h4>Fundamentos de Cloud Computing - Talento Digitar</h4>
                                     <span class="badge-status">Completado</span>
                                 </div>
@@ -130,7 +141,7 @@
                   
                                     
                     <section id="skills">
-                        <h2>Habilidades</h2>
+                        <h2 data-i18n="nav.skills">Habilidades</h2>
                         <div class="skills-grid" >
                             <div class="skill-card">
                                 <img src="assets/images/java-square.png" alt="Java" class="skill-icon">
@@ -164,13 +175,13 @@
                     </section>
 
                     <section id="projects">
-                        <h2>Proyectos</h2>
+                        <h2 data-i18n="nav.projects">Proyectos</h2>
                         <div class="projects-grid">
                             <div class="project-card">
                                 <img src="./assets/images/proyecto1.jpg" alt="E-Commerce Platform" class="project-img">
                                 <div class="project-info">
-                                    <h3 class="project-title">BLOGGING PLATFORM API</h3>
-                                    <p>Esta API proporciona funcionalidades para gestionar una plataforma de blogs. Permite la creación,
+                                    <h3 class="project-title" data-i18n="projects.blogApi.title.1">BLOGGING PLATFORM API</h3>
+                                    <p data-i18n="projects.blogApi.desc.1">Esta API proporciona funcionalidades para gestionar una plataforma de blogs. Permite la creación,
                                          edición y eliminación de publicaciones, comentarios y repuestas, autenticación basada en tokens.</p>
                                     <div class="project-links">
                                         <!--<a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>-->
@@ -182,8 +193,8 @@
                             <div class="project-card">
                                 <img src="./assets/images/proyecto2.jpg" alt="Task Manager" class="project-img">
                                 <div class="project-info">
-                                    <h3 class="project-title">Servicio de Almacenamiento de Archivos</h3>
-                                    <p>Este proyecto es un servicio RESTful desarrollado en Spring Boot que permite subir, descargar, listar, eliminar archivos 
+                                    <h3 class="project-title" data-i18n="projects.blogApi.title.2">Servicio de Almacenamiento de Archivos</h3>
+                                    <p data-i18n="projects.blogApi.desc.2">Este proyecto es un servicio RESTful desarrollado en Spring Boot que permite subir, descargar, listar, eliminar archivos 
                                         y crear carpetas dentro de un directorio raíz configurable. Es útil para sistemas que requieren gestión básica de archivos 
                                         del lado del servidor.</p>
                                     <div class="project-links">
@@ -196,8 +207,8 @@
                             <div class="project-card">
                                 <img src="./assets/images/proceso.jpg" alt="Social Network" class="project-img">
                                 <div class="project-info">
-                                    <h3 class="project-title">E-COMMERCE /EN CONSTRUCION/</h3>
-                                    <p>API RESTful para plataforma de comercio electronico</p>
+                                    <h3 class="project-title" data-i18n="projects.blogApi.title.3">E-COMMERCE / EN DESARROLLO /</h3>
+                                    <p data-i18n="projects.blogApi.desc.3">API RESTful para plataforma de comercio electronico</p>
                                     <div class="project-links">
                                         <!--<a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>-->
                                         <a href="https://github.com/Derlin-Dev/E-Commerce"><i class="fab fa-github"></i> Código</a>
@@ -208,30 +219,30 @@
                     </section>
 
                     <section id="contact">
-                        <h2>Contacto</h2>
+                        <h2 data-i18n="contact.title">Contacto</h2>
                         <form id="contactForm" class="contact-form" action="https://formspree.io/f/mnjbqaey" method="POST">
                             
                             <div class="form-group">
-                                <label for="name">Nombre</label>
+                                <label for="name" data-i18n="contact.name">Nombre</label>
                                 <input type="text" id="name" name="name" required>
                             </div>
                             
                             <div class="form-group">
-                                <label for="email">Email</label>
+                                <label for="email" data-i18n="contact.email">Email</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
                             
                             <div class="form-group">
-                                <label for="subject">Asunto</label>
+                                <label for="subject" data-i18n="contact.subject">Asunto</label>
                                 <input type="text" id="subject" name="subject" required>
                             </div>
                             
                             <div class="form-group">
-                                <label for="message">Mensaje</label>
+                                <label for="message" data-i18n="contact.message">Mensaje</label>
                                 <textarea id="message" name="message" required></textarea>
                             </div>
                             
-                            <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                            <button type="submit" class="submit-btn" data-i18n="contact.send">Enviar Mensaje</button>
                             <p id="formStatus" class="form-status"></p>
                         </form>
                     </section>
@@ -305,6 +316,36 @@
         }
     });
     });
+
+    //Cambio de idioma
+    async function loadLanguage(lang) {
+    const res = await fetch(`./assets/util/i18n/${lang}.json`);
+    const translations = await res.json();
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[key]) {
+        el.textContent = translations[key];
+        }
+    });
+
+    document.documentElement.lang = lang;
+    localStorage.setItem("lang", lang);
+    }
+
+    const langSwitcher = document.getElementById("langSwitcher");
+
+    const browserLang = navigator.language.startsWith("en") ? "en" : "es";
+    const savedLang = localStorage.getItem("lang") || browserLang;
+
+    if (langSwitcher) {
+    langSwitcher.value = savedLang;
+    langSwitcher.addEventListener("change", e => {
+        loadLanguage(e.target.value);
+    });
+    }
+
+    loadLanguage(savedLang);
     </script>
 
 </body>

@@ -1,0 +1,53 @@
+{
+  "nav.about": "About",
+  "nav.education": "Education",
+  "nav.badges": "Badges & Certifications",
+  "nav.skills": "Skills",
+  "nav.projects": "Projects",
+  "nav.contact": "Contact",
+
+  "profile.title": "SOFTWARE ENGINEER // BACKEND DEVELOPER",
+
+  "about.title": "About Me",
+  "about.stack": "Backend Developer | Java | Spring Boot | Microservices | SQL Server | PostgreSQL | Docker | Git & GitHub",
+  "about.description": "My name is Derlin R. Valera. I am a Software Engineering student passionate about backend development and software architecture. I work with Java, Spring Boot, and microservices design, with experience in scalable APIs, Spring Cloud, JWT authentication, and PostgreSQL. I have basic knowledge of Docker and deployment. I am seeking entry-level backend roles to continue learning about cloud computing, microservices development, and DevOps.",
+
+  "about.downloadCv": "Download CV",
+
+  "education.title": "Education",
+
+  "education.div.1": "2024 - Present",
+  "education.h3.1": "SOFTWARE ENGINEERING",
+  "education.p.1": "Universidad Tecnológica del Cibao Oriental (UTECO)",
+
+  "education.div.2": "December 2025 - February 2026",
+  "education.h3.2": "Cloud Computing Fundamentals",
+  "education.p.2": "Talento Digital RD (INDOTEL)",
+
+  "education.div.3": "April 2025 - June 2025",
+  "education.h3.3": "DATABASE ADMINISTRATION I",
+  "education.p.3": "Instituto Tecnológico de las Américas (ITLA)",
+
+  "education.div.4": "July 2023 - August 2023",
+  "education.h3.4": "IT TECHNICAL SUPPORT",
+  "education.p.4": "Centro de Tecnología Universal (CENTU)",
+
+  "projects.title": "Projects",
+  "link": "Code",
+
+  "projects.blogApi.title.1": "BLOGGING PLATFORM API",
+  "projects.blogApi.desc.1": "This API provides features to manage a blogging platform. It allows creating, editing, and deleting posts, comments, and replies, with token-based authentication.",
+
+  "projects.blogApi.title.2": "File Storage Service",
+  "projects.blogApi.desc.2": "This project is a RESTful service developed with Spring Boot that allows uploading, downloading, listing, and deleting files, as well as creating folders within a configurable root directory. It is useful for systems that require basic server-side file management.",
+
+  "projects.blogApi.title.3": "E-COMMERCE / IN DEVELOPMENT /",
+  "projects.blogApi.desc.3": "RESTful API for an e-commerce platform",
+
+  "contact.title": "Contact",
+  "contact.name": "Name",
+  "contact.email": "Email",
+  "contact.subject": "Subject",
+  "contact.message": "Message",
+  "contact.send": "Send Message"
+}
