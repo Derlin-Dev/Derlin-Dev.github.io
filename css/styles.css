@@ -47,36 +47,6 @@
     --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* ==========================================================================
-   SECCIÓN EDUCACIÓN: altura fija y disposición en columnas (3 items por columna)
-   ========================================================================== */
-
-.section-educacion-wrapper {}
-
-section#educacion {
-    /* Sin altura fija: permite que el contenido fluya naturalmente */
-    /* Reducimos padding lateral para aumentar el ancho utilizable */
-    padding: var(--spacing-2xl) 6%;
-}
-
-.education-dashboard-card {
-    max-width: 1500px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.education-timeline {
-    display: grid;
-    grid-auto-flow: column; /* llenar filas primero, luego crear nuevas columnas */
-    grid-template-rows: repeat(3, auto); /* 3 elementos por columna */
-    gap: var(--spacing-md) var(--spacing-2xl); /* row-gap column-gap */
-    align-items: start;
-}
-
-.edu-item {
-    break-inside: avoid;
-    margin-bottom: var(--spacing-sm);
-}
 
 /* Responsive: en pantallas pequeñas revertir a flujo vertical */
 @media (max-width: 900px) {
@@ -839,17 +809,39 @@ nav a:hover {
 /* ============================================================================
    10. SECCIÓN EDUCACIÓN
    ============================================================================ */
+/* ==========================================================================
+   SECCIÓN EDUCACIÓN: altura fija y disposición en columnas (3 items por columna)
+   ========================================================================== */
+
+.section-educacion-wrapper {}
+
+section#educacion {
+    padding: var(--spacing-2xl) 6%;
+}
+
+.education-timeline {
+    display: grid;
+    grid-auto-flow: column; /* llenar filas primero, luego crear nuevas columnas */
+    grid-template-rows: repeat(3, auto); /* 3 elementos por columna */
+    gap: var(--spacing-md) var(--spacing-2xl); /* row-gap column-gap */
+    align-items: start;
+}
+
+.edu-item {
+    break-inside: avoid;
+    margin-bottom: var(--spacing-sm);
+}
 
 .education-dashboard-card {
     margin-top: var(--spacing-xl);
     margin-left: auto;
     margin-right: auto;
-    background: var(--card-color);
     padding: calc(var(--spacing-xl) + 10px);
     border-radius: var(--border-radius-xl);
     position: relative;
     overflow: hidden;
-    max-width: 1200px; /* aumentado para más ancho utilizable */
+    max-width: 1500px; /* aumentado para más ancho utilizable */
+    margin: 0 auto;
     width: 100%;
 }
 
