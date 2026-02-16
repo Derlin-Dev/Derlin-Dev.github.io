@@ -179,7 +179,7 @@ function getTechIcon(tech) {
         'Django': 'fab fa-python',
         'Flask': 'fab fa-python',
         'Java': 'fab fa-java',
-        'Spring Boot': 'fab fa-java',
+        'Spring Boot': 'fas fa-leaf',
         'PHP': 'fab fa-php',
         'Laravel': 'fab fa-php',
         'Ruby': 'fas fa-gem',
@@ -199,6 +199,7 @@ function getTechIcon(tech) {
         
         // DevOps & Cloud
         'Docker': 'fab fa-docker',
+        'Docker Compose': 'fas fa-file-pen',
         'Kubernetes': 'fab fa-docker',
         'AWS': 'fab fa-aws',
         'Azure': 'fab fa-windows',
@@ -225,7 +226,8 @@ function getTechIcon(tech) {
         'Yarn': 'fab fa-yarn',
         'Jest': 'fas fa-vial',
         'Cypress': 'fas fa-vial',
-        'Selenium': 'fas fa-vial'
+        'Selenium': 'fas fa-vial',
+        'Http' : 'fas fa-network-wired'
     };
     
     return icons[tech] || 'fas fa-cog';

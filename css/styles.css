@@ -693,6 +693,21 @@ nav a:hover {
     transform: scale(1.1);
 }
 
+.project-tech .tech-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.project-tech .tech-name {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
 .project-buttons {
     display: flex;
     gap: var(--spacing-md);

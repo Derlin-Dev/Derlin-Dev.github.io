@@ -30,7 +30,7 @@
 
   "technologies": {
     "Backend": [
-      "Java 11+",
+      "Java",
       "Spring Boot"
     ],
     "Database": [
