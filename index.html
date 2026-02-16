@@ -2,371 +2,416 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>Portafolio | Tu Nombre</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derli R. Valera // Derlin-Dev</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                   <h1>DERLIN-DEV.COM</h1>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#about" data-i18n="nav.about">Sobre mí</a></li>
-                    <li><a href="#educacion" data-i18n="nav.education"> Educacion</a></li>
-                    <li><a href="#badges" data-i18n="nav.badges">Insignias y Certificados</a></li>
-                    <li><a href="#skills" data-i18n="nav.skills">Habilidades</a></li>
-                    <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
-                    <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
-                </ul>
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
 
-                <select id="langSwitcher" class="lang-switcher">
-                    <option value="es">🇩🇴 ES</option>
-                    <option value="en">🇺🇸 EN</option>
-                </select>
-            </nav>
+<header>
+    <h1 data-i18n="header.title">TuNombre.dev</h1>
+    <nav>
+        <a href="#sobre" data-i18n="header.nav.about">Sobre mí</a>
+        <a href="#proyectos" data-i18n="header.nav.projects">Proyectos</a>
+        <a href="#habilidades" data-i18n="header.nav.skills">Habilidades</a>
+        <a href="#educacion" data-i18n="header.nav.education">Educación</a>
+        <a href="#contact" data-i18n="header.nav.contact">Contacto</a>
+    </nav>
+    <div class="language-buttons">
+        <button class="lang-btn" data-lang="es">🇩🇴 ES</button>
+        <button class="lang-btn" data-lang="en">🇺🇸 EN</button>
+    </div>
+    <button class="theme-btn" id="themeToggle">🌙</button>
+</header>
+
+
+<section id="hero" class="hero reveal">
+    <div class="hero-content">
+
+        <div class="hero-image">
+            <img src="./assets/img/profile.jpg" alt="Foto de perfil">
         </div>
-    </header>
 
-    <div>
-        <div class="container">
-            <div class="main-content">
-                <!-- Profile Card -->
-                <div class="profile-card">
-                    <img src="./assets/images/img.png" alt="Profile Image" class="profile-img">
-                    <h1 class="profile-name">Derlin R. Valera</h1>
-                    <p class="profile-title" data-i18n="profile.title">ING. DE SOFWARE // DESARROLLADOR BACKEND</p>
-                    
-                    <div class="social-links">
-                        <a href="https://github.com/Derlin-Dev" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/derlin-v-peguero" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+        <div class="hero-text">
+            <h2 data-i18n="hero.greeting">Hola, soy</h2>
+            <h1 data-i18n="hero.name">Tu Nombre</h1>
+            <h3 data-i18n="hero.title">Backend Developer | Java & Spring Boot</h3>
+            
+            <div class="availability-badge available" id="availabilityBadge">
+                <span class="availability-dot"></span>
+                <span class="availability-text" data-i18n="hero.available">Disponible para nuevas oportunidades</span>
+            </div>
 
-                </div>
+            <div class="hero-buttons">
+                <a href="assets/CV-TuNombre.pdf" download class="btn-primary" data-i18n="hero.downloadCV">
+                    Descargar CV
+                </a>
+            </div>
 
-                <!-- Columna derecha -->
-                <div class="content">
-                    <section id="about" data-aos="fade-up">
-                        <h2 data-i18n="about.title">Acerca de mí</h2><br>
-                        <div class="about-text">
-                            <p data-i18n="about.stack">Desarrollador Backend | Java | Spring Boot | Microservicios | SQL Server | PostgreSQL | Docker | Git y GitHub</p><br>
-                            <p data-i18n="about.description">Mi nombre es <strong>Derlin R.</strong> Estudiante de Ingeniería de Software, apasionado por el desarrollo backend y la arquitectura de software. 
-                            Manejo Java, Spring Boot y diseño de microservicios, con conocimiento en APIs escalables, Spring cloud, autenticación JWT y PostgreSQL. 
-                            Conocimientos básicos en Docker y despliegue. 
-                            Busco iniciar en roles de backend para seguir aprendiendo sobre computación en la nube, desarrollo de micrservicios y DevOps.
-                            </p><br>
-                            <p class="p1">
-                            <a href="./assets/util/CV_Derlin R. Valera Peguero.pdf" download class="download-cv-btn" data-i18n="about.downloadCv">
-                                <i class="fas fa-download"></i> Descargar CV
-                            </a>
-                            </p>
-                        </div>
-                    </section>
-
-                    <section id="educacion">
-                        <h2 data-i18n="education.title">Educacion</h2>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-date" data-i18n="education.div.1">2024 - Presente</div>
-                                <h3 class="timeline-title" data-i18n="education.h3.1">INGENIERIA DE SOFTWARE</h3>
-                                <p class="timeline-company" data-i18n="education.p.1">Universidad Tecnologica del Cibao Orientar(UTECO)</p>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-date" data-i18n="education.div.2">Diciembre 2025 - Febrero 2026 </div>
-                                <h3 class="timeline-title" data-i18n="education.h3.2">Fundamentos de Nube (Cloud Computing)</h3>
-                                <p class="timeline-company" data-i18n="education.p.2">Talento Digitar RD(INDOTE)</p>
-                            </div>
-                            
-                            <div class="timeline-item">
-                                <div class="timeline-date" data-i18n="education.div.3">Abril 2025 - Junio 2025 </div>
-                                <h3 class="timeline-title" data-i18n="education.h3.3">ADMINISTRACIÓN DE BASES DE DATOS I</h3>
-                                <p class="timeline-company" data-i18n="education.p.3">Instituto Tecnologico de las Americas(ITLA)</p>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-date" data-i18n="education.div.4">Julio 2023 - Agosto 2023</div>
-                                <h3 class="timeline-title" data-i18n="education.h3.4">TECNICO EN SOPORTE DE TIC</h3>
-                                <p class="timeline-company" data-i18n="education.p.4">Centro de Tecnología Universal(CENTU)</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="badges">
-                        <h2 data-i18n="nav.badges">Insignias & Certificaciones</h2>
-
-                        <div class="badges-grid big-badges">
-                            <a href="https://www.credly.com/badges/2b3a3c81-b4c7-4d84-be82-05c74ec19d57/public_url" target="_blank"">
-                                <div class="badge-item">
-                                    <img src="assets/images/Certificados/aws-educate-introduction-to-cloud-101-training-badg.png" alt="AWS Educate">
-                                    <h4>AWS Educate Introduction to Cloud 101 - Training Badge</h4>
-                                    <span class="badge-status">Completado</span>
-                                </div>
-                            </a>   
-                            <a href="https://orbi.edu.do/orbi/educacionpermanente/cursosaprobados/qr/233785/82655" target="_blank">
-                                <div class="badge-item">
-                                    <img src="assets/images/Certificados/Certificado-Administracion-de-bases-de-datos-1.png" alt="AWS Educate">
-                                    <h4>ADMINISTRACIÓN DE BASES DE DATOS 1 - ITLA</h4>
-                                    <span class="badge-status">Completado</span>
-                                </div>
-                            </a>  
-                           
-                            <a src="" target="">
-                                <div class="badge-item">
-                                    <img class="open-modal" src="assets/images/Certificados/Nube_Certificado.png" alt="AWS Educate">
-                                    <h4>Fundamentos de Cloud Computing - Talento Digitar</h4>
-                                    <span class="badge-status">Completado</span>
-                                </div>
-                            </a>  
-                             <a src="" target="">
-                                <div class="badge-item">
-                                    <img class="open-modal" src="assets/images/Certificados/Habilidades_de_Liderasgo_en_equipo.png" alt="AWS Educate">
-                                    <h4>Habilidades de liderazgo en equipo - Talento Digitar</h4>
-                                    <span class="badge-status">Completado</span>
-                                </div>
-                            </a>  
-                        </div>
-                          <div id="modal" class="modal">
-                            <span class="close">&times;</span>
-                            <img class="modal-content" id="modal-img">
-                        </div>
-                    </section>
-                   
-                  
-                                    
-                    <section id="skills">
-                        <h2 data-i18n="nav.skills">Habilidades</h2>
-                        <div class="skills-grid" >
-                            <div class="skill-card">
-                                <img src="assets/images/java-square.png" alt="Java" class="skill-icon">
-                                <h4>Java</h4>
-                            </div>
-                            <div class="skill-card">
-                                <img src="assets/images/spring-boot-square.png" alt="Spring Boot" class="skill-icon">
-                                <h4>Spring Boot</h4>
-                            </div>
-                            <div class="skill-card">
-                                <img src="assets/images/postgres-square.png" alt="PostgreSQL" class="skill-icon">
-                                <h4>PostgreSQL</h4>
-                            </div>
-                            <div class="skill-card">
-                                <img src="assets/images/sqlserver-square.png" alt="SQLServer" class="skill-icon">
-                                <h4>SQLServer</h4>
-                            </div>
-                            <div class="skill-card">
-                                <img src="assets/images/docker-square.png" alt="Docker" class="skill-icon">
-                                <h4>Docker</h4>
-                            </div>
-                            <div class="skill-card">
-                                <img src="assets/images/github-square.png" alt="GitHub Actions" class="skill-icon">
-                                <h4>GitHub</h4>
-                            </div>
-                            <div class="skill-card">
-                                <img src="assets/images/linux-square.png" alt="Linux" class="skill-icon">
-                                <h4>Linux</h4>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="projects">
-                        <h2 data-i18n="nav.projects">Proyectos</h2>
-                        <div class="projects-grid">
-                            <div class="project-card">
-                                <img src="./assets/images/proyecto1.jpg" alt="E-Commerce Platform" class="project-img">
-                                <div class="project-info">
-                                    <h3 class="project-title" data-i18n="projects.blogApi.title.1">BLOGGING PLATFORM API</h3>
-                                    <p data-i18n="projects.blogApi.desc.1">Esta API proporciona funcionalidades para gestionar una plataforma de blogs. Permite la creación,
-                                         edición y eliminación de publicaciones, comentarios y repuestas, autenticación basada en tokens.
-                                    </p>
-                    
-                                    <div class="project-links">
-                                        <!--<a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>-->
-                                        <a href="https://github.com/Derlin-Dev/api-microservices-blogs.v2" target="_blank"><i class="fab fa-github"></i> Código</a>
-                                    </div>
-
-                                    <div class="project-tech">
-                                        <span><i class="fab fa-java"></i> Java</span>
-                                        <span><i class="fas fa-leaf"></i> Spring Boot</span>
-                                        <span><i class="fas fa-key"></i> JWT</span>
-                                        <span><i class="fas fa-database"></i> PostgreSQL</span>
-                                        <span><i class="fa-brands fa-docker"></i>Docker</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="project-card">
-                                <img src="./assets/images/proyecto2.jpg" alt="Task Manager" class="project-img">
-                                <div class="project-info">
-                                    <h3 class="project-title" data-i18n="projects.blogApi.title.2">Servicio de Almacenamiento de Archivos</h3>
-                                    <p data-i18n="projects.blogApi.desc.2">Este proyecto es un servicio RESTful desarrollado en Spring Boot que permite subir, descargar, listar, eliminar archivos 
-                                        y crear carpetas dentro de un directorio raíz configurable. Es útil para sistemas que requieren gestión básica de archivos 
-                                        del lado del servidor.</p>
-                                    <div class="project-links">
-                                         <!--<a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>-->
-                                        <a href="https://github.com/Derlin-Dev/storefile--microservice"><i class="fab fa-github"></i> Código</a>
-                                    </div>
-                                    <div class="project-tech">
-                                        <span><i class="fab fa-java"></i> Java</span>
-                                        <span><i class="fas fa-leaf"></i> Spring Boot</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="project-card">
-                                <img src="./assets/images/proceso.jpg" alt="Social Network" class="project-img">
-                                <div class="project-info">
-                                    <h3 class="project-title" data-i18n="projects.blogApi.title.3">E-COMMERCE / EN DESARROLLO /</h3>
-                                    <p data-i18n="projects.blogApi.desc.3">API RESTful para plataforma de comercio electronico</p>
-                                    <div class="project-links">
-                                        <!--<a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>-->
-                                        <a href="https://github.com/Derlin-Dev/E-Commerce"><i class="fab fa-github"></i> Código</a>
-                                    </div>
-                                    <div class="project-tech">
-                                        <span><i class="fab fa-java"></i> Java</span>
-                                        <span><i class="fas fa-leaf"></i> Spring Boot</span>
-                                        <span><i class="fas fa-key"></i> JWT</span>
-                                        <span><i class="fas fa-database"></i> PostgreSQL</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="contact">
-                        <h2 data-i18n="contact.title">Contacto</h2>
-                        <form id="contactForm" class="contact-form" action="https://formspree.io/f/mnjbqaey" method="POST">
-                            
-                            <div class="form-group">
-                                <label for="name" data-i18n="contact.name">Nombre</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email" data-i18n="contact.email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="subject" data-i18n="contact.subject">Asunto</label>
-                                <input type="text" id="subject" name="subject" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message" data-i18n="contact.message">Mensaje</label>
-                                <textarea id="message" name="message" required></textarea>
-                            </div>
-                            
-                            <button type="submit" class="submit-btn" data-i18n="contact.send">Enviar Mensaje</button>
-                            <p id="formStatus" class="form-status"></p>
-                        </form>
-                    </section>
+            <div class="social-links">
+                <a href="https://github.com/Derlin-Dev" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/derlin-dev" target="_blank"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
+
     </div>
-        
-        
-     <footer>
-        <div class="container">
-            <p>&copy; 2025 Derlin-Dev. Todos los derechos reservados.</p>
+</section>
+
+
+<section id="sobre" class="reveal">
+    <h2 class="section-title" data-i18n="about.title">Sobre mí</h2>
+
+    <div class="about-container">
+
+        <div class="about-text">
+            <p data-i18n="about.description1">
+                Soy desarrollador backend especializado en la construcción de 
+                APIs robustas y arquitecturas escalables utilizando Java y Spring Boot.
+                Me enfoco en escribir código limpio, estructurado y mantenible,
+                aplicando buenas prácticas como arquitectura en capas, seguridad con JWT
+                y comunicación entre microservicios.
+                Actualmente continúo fortaleciendo mis conocimientos en 
+                arquitecturas distribuidas y patrones de diseño, con el objetivo
+                de desarrollar sistemas de alto rendimiento y calidad profesional.
+            </p>
         </div>
-    </footer>
-    
 
-    <script src="./assets/js/script.js"></script>
-    <script>
-    const modal = document.getElementById("modal");
-    const modalImg = document.getElementById("modal-img");
-    const images = document.querySelectorAll(".open-modal");
-    const close = document.querySelector(".close");
+       <div class="about-stats">
 
-    images.forEach(img => {
-        img.onclick = function () {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        }
-    });
+            <!-- Proyectos -->
+            <div class="stat-card">
+                <div class="stat-header">
+                    <i class="fas fa-code"></i>
+                    <h3><span class="counter" data-target="18">0</span>+</h3>
+                </div>
+                <p data-i18n="about.stats.projects">Proyectos desarrollados</p>
 
-    close.onclick = () => modal.style.display = "none";
-    modal.onclick = () => modal.style.display = "none";
+                <a href="https://github.com/Derlin-Dev" target="_blank" class="btn-outline stat-btn" data-i18n="about.stats.viewGithub">
+                    <i class="fab fa-github"></i> Ver GitHub
+                </a>
+            </div>
 
-        //Mensaje al enviar el formulario y no recargar la pagina 
-    document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("contactForm");
-    const status = document.getElementById("formStatus");
+            <!-- Arquitecturas -->
+            <div class="stat-card">
+                <div class="stat-header">
+                    <i class="fas fa-layer-group"></i>
+                    <h3><span class="counter" data-target="2">0</span>+</h3>
+                </div>
+                <p data-i18n="about.stats.architectures">Arquitecturas implementadas</p>
+            </div>
 
-    if (!form) return;
+            <!-- Intereses -->
+            <div class="stat-card interests-card">
+                <div class="stat-header">
+                    <i class="fas fa-compass"></i>
+                    <h3 data-i18n="about.stats.interests">Intereses</h3>
+                </div>
 
-    form.addEventListener("submit", async (e) => {
-        e.preventDefault(); // 🚫 evita recarga
+                <div class="interests-list">
+                    <span><i class="fas fa-server"></i><span data-i18n="about.stats.backend"> Backend</span></span>
+                    <span><i class="fas fa-cloud"></i><span data-i18n="about.stats.cloud"> Cloud Computing</span></span>
+                    <span><i class="fas fa-cogs"></i><span data-i18n="about.stats.devops"> DevOps</span></span>
+                </div>
+            </div>
 
-        status.textContent = "Enviando...";
-        status.className = "form-status";
+        </div>
 
-        const data = new FormData(form);
+    </div>
+</section>
 
-        try {
-        const response = await fetch(form.action, {
-            method: form.method,
-            body: data,
-            headers: {
-            "Accept": "application/json"
-            }
-        });
 
-        if (response.ok) {
-            status.textContent = "✅ Mensaje enviado correctamente. ¡Gracias!";
-            status.classList.add("success");
-            form.reset();
-        } else {
-            const result = await response.json();
-            status.textContent = result.error || "❌ Ocurrió un error al enviar el mensaje.";
-            status.classList.add("error");
-        }
+<section id="proyectos" class="reveal">
+    <h2 class="section-title" data-i18n="projects.title">Proyectos</h2>
 
-        } catch (error) {
-        console.error(error);
-        status.textContent = "❌ Error de red. Intenta más tarde.";
-        status.classList.add("error");
-        }
-    });
-    });
+    <div class="projects-grid">
 
-    //Cambio de idioma
-    async function loadLanguage(lang) {
-    const res = await fetch(`./assets/util/i18n/${lang}.json`);
-    const translations = await res.json();
+        <!-- Proyecto 1 -->
+        <div class="project-card reveal">
+            <div class="project-image" >
+                <img src="./assets/img/imgtarjetas/proyecto1.jpg" alt="Blog con Microservicios">
+            </div>
 
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (translations[key]) {
-        el.textContent = translations[key];
-        }
-    });
+            <div class="project-content">
+                <h3 data-i18n="projects.project1.name">Blog con Microservicios</h3>
 
-    document.documentElement.lang = lang;
-    localStorage.setItem("lang", lang);
-    }
+                <p data-i18n="projects.project1.description">
+                    Plataforma de blog escalable con arquitectura de microservicios,
+                    cada componente independiente y fácil de mantener.
+                </p>
 
-    const langSwitcher = document.getElementById("langSwitcher");
+                <div class="project-tech">
+                    <i class="fab fa-java"></i>
+                    <i class="fas fa-leaf"></i>
+                    <i class="fas fa-database"></i>
+                    <i class="fab fa-docker"></i>
+                </div>
 
-    const browserLang = navigator.language.startsWith("en") ? "en" : "es";
-    const savedLang = localStorage.getItem("lang") || browserLang;
+                <div class="project-buttons">
+                    <a href="project-detail.html?id=blog-microservicios" class="btn-primary">
+                        Ver Detalles
+                    </a>
+                    <a href="https://github.com" target="_blank" class="btn-outline">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
 
-    if (langSwitcher) {
-    langSwitcher.value = savedLang;
-    langSwitcher.addEventListener("change", e => {
-        loadLanguage(e.target.value);
-    });
-    }
+        <!-- Proyecto 2 -->
+        <div class="project-card reveal">
+            <div class="project-image">
+                <img src="./assets/img/imgtarjetas/proceso.jpg" alt="Plataforma E-commerce">
+            </div>
 
-    loadLanguage(savedLang);
-    </script>
+            <div class="project-content">
+                <h3 data-i18n="projects.project3.name">API Para Plataforma de E-Commence // EN DESARROLLO</h3>
 
+                <p data-i18n="projects.project3.description">
+                   
+                </p>
+
+                <div class="project-tech">
+                    <i class="fab fa-java"></i>
+                    <i class="fas fa-leaf"></i>
+                    <i class="fas fa-database"></i>
+                    <i class="fab fa-docker"></i>
+                </div>
+
+                <div class="project-buttons">
+                    <a href="project-detail.html?id=ecommerce-react" class="btn-primary">
+                        Ver Detalles
+                    </a>
+                    <a href="https://github.com" target="_blank" class="btn-outline">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Proyecto 3 -->
+        <div class="project-card reveal">
+            <div class="project-image">
+                <img src="./assets/img/imgtarjetas/proyecto2.jpg" alt="Gestor de Tareas">
+            </div>
+
+            <div class="project-content">
+                <h3 data-i18n="projects.project2.name">API de Gestion de Archivos</h3>
+
+                <p data-i18n="projects.project2.description">
+                    Aplicación colaborativa para gestión de proyectos,
+                    tableros Kanban, notificaciones en tiempo real y reportes.
+                </p>
+
+                <div class="project-tech">
+                   <i class="fab fa-java"></i>
+                    <i class="fas fa-leaf"></i>
+                    <i class="fas fa-database"></i>
+                </div>
+
+                <div class="project-buttons">
+                    <a href="project-detail.html?id=file-storage-services" class="btn-primary">
+                        Ver Detalles
+                    </a>
+                    <a href="https://github.com" target="_blank" class="btn-outline">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="habilidades">
+    <h2 class="section-title" data-i18n="skills.title">Habilidades Técnicas</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card reveal"><i class="fab fa-java"></i><h3 data-i18n="skills.java">Java</h3>
+        </div>
+
+        <div class="skill-card reveal"><i class="fas fa-leaf"></i><h3 data-i18n="skills.springframework">Spring Boot</h3>
+        </div>
+
+        <div class="skill-card reveal"><i class="fas fa-shield-alt"></i> <h3 data-i18n="skills.springsecurity">Spring Security</h3>
+        </div>
+
+        <div class="skill-card reveal"><i class="fas fa-key"></i>  <h3 data-i18n="skills.jwt">JWT</h3>
+        </div>
+
+        <div class="skill-card reveal"><i class="fas fa-exchange-alt"></i> <h3 data-i18n="skills.restapis">REST APIs</h3>
+        </div>
+
+        <div class="skill-card reveal"><i class="fas fa-project-diagram"></i><h3 data-i18n="skills.architecture">Arquitectura de Microservicios</h3>
+        </div>
+
+        <div class="skill-card reveal"><i class="fas fa-database"></i><h3 data-i18n="skills.SQLServer">Event-Driven Architecture</h3>
+        </div>
+
+        <div class="skill-card reveal"><i class="fas fa-database"></i><h3 data-i18n="skills.postgresql">PostgreSQL</h3>
+        </div>
+
+        <div class="skill-card reveal"><i class="fab fa-docker"></i><h3 data-i18n="skills.docker">Docker</h3>
+        </div>
+
+        <div class="skill-card reveal"><i class="fas fa-envelope"></i><h3 data-i18n="skills.rabbitmq">RabbitMQ</h3>
+        </div>
+
+        <div class="skill-card reveal"><i class="fab fa-git-alt"></i><h3 data-i18n="skills.git">Git</h3> </div>
+
+        <div class="skill-card reveal"><i class="fab fa-linux"></i><h3 data-i18n="skills.linux">Linux</h3>
+
+    </div>
+</section>
+
+
+<section id="educacion" class="reveal">
+    <h2 class="section-title" data-i18n="education.title">Education</h2>
+
+    <div class="education-dashboard-card">
+
+        <div class="education-timeline">
+
+            <!-- Item -->
+            <div class="edu-item">
+                <div class="edu-dot"></div>
+                <div class="edu-content">
+                    <span class="edu-date" data-i18n="education.item1.date">2024 - Presente</span>
+                    <h3 data-i18n="education.item1.degree">Software Engineering</h3>
+                    <h4 data-i18n="education.item1.school">UTECO</h4>
+
+                    <p data-i18n="education.item1.description">
+                        Formación en desarrollo de software, estructuras de datos,
+                        arquitectura de sistemas y diseño orientado a objetos.
+                    </p>
+
+                    <div class="edu-tags" data-i18n="education.item1.tags">
+                        <span>Architecture</span>
+                        <span>OOP</span>
+                        <span>Data Structures</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item -->
+            <div class="edu-item">
+                <div class="edu-dot"></div>
+                <div class="edu-content">
+                    <span class="edu-date" data-i18n="education.item2.date">Dec 2025 - Feb 2026</span>
+                    <h3 data-i18n="education.item2.degree">Cloud Computing Fundamentals</h3>
+                    <h4 data-i18n="education.item2.school">INDOTEL</h4>
+
+                    <p data-i18n="education.item2.description">
+                        Fundamentos de cloud computing, virtualización,
+                        contenedores y arquitectura en la nube.
+                    </p>
+
+                    <div class="edu-tags" data-i18n="education.item2.tags">
+                        <span>Cloud</span>
+                        <span>Containers</span>
+                        <span>Infrastructure</span>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Item -->
+            <div class="edu-item">
+                <div class="edu-dot"></div>
+                <div class="edu-content">
+                    <span class="edu-date" data-i18n="education.item4.date">Jul 2023 - Aug 2023</span>
+                    <h3 data-i18n="education.item4.degree">IT Technical Support</h3>
+                    <h4 data-i18n="education.item4.school">CENTU</h4>
+
+                    <p data-i18n="education.item4.description">
+                        Soporte técnico, diagnóstico de hardware y resolución
+                        de incidencias en entornos empresariales.
+                    </p>
+
+                    <div class="edu-tags" data-i18n="education.item4.tags">
+                        <span >Networking</span>
+                        <span>Hardware</span>
+                        <span>Troubleshooting</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item -->
+            <div class="edu-item">
+                <div class="edu-dot"></div>
+                <div class="edu-content">
+                    <span class="edu-date" data-i18n="education.item3.date">Jul 2023 - Aug 2023</span>
+                    <h3 data-i18n="education.item3.degree">IT Technical Support</h3>
+                    <h4 data-i18n="education.item3.school">CENTU</h4>
+
+                    <p data-i18n="education.item3.description">
+                        Soporte técnico, diagnóstico de hardware y resolución
+                        de incidencias en entornos empresariales.
+                    </p>
+
+                    <div class="edu-tags" data-i18n="education.item3.tags">
+                        <span>Networking</span>
+                        <span>Hardware</span>
+                        <span>Troubleshooting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="contact" class="reveal">
+    <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
+
+    <div class="contact-card">
+        <form id="contactForm" class="contact-form"
+              action="https://formspree.io/f/mnjbqaey"
+              method="POST">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name" data-i18n="contact.form.name">Nombre</label>
+                    <input type="text" id="name" name="name" data-i18n="contact.form.name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" data-i18n="contact.form.email">Email</label>
+                    <input type="email" id="email" name="email" data-i18n="contact.form.email" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="subject" data-i18n="contact.form.subject">Asunto</label>
+                <input type="text" id="subject" name="subject" data-i18n="contact.form.subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message" data-i18n="contact.form.message">Mensaje</label>
+                <textarea id="message" name="message" rows="5" data-i18n="contact.form.message" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn" data-i18n="contact.form.send">
+                <i class="fas fa-paper-plane"></i> Enviar Mensaje
+            </button>
+
+            <p id="formStatus" class="form-status"></p>
+        </form>
+    </div>
+</section>
+
+
+<footer class="reveal" data-i18n="footer.copyright">
+    © 2026 Tu Nombre
+</footer>
+
+<script src="./js/i18n.js"></script>
+<script src="./js/app.js"></script>
 </body>
 </html>

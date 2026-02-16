@@ -1,0 +1,18 @@
+[
+  {
+    "id": "blog-microservicios",
+    "title": "Blog con Microservicios",
+    "file": "./util/blog-microservicios.json"
+  },
+  {
+    "id": "ecommerce-react",
+    "title": "Plataforma E-commerce",
+    "file": "./util/ecommerce-react.json"
+  },
+  {
+    "id": "file-storage-services",
+    "title": "Gestor de Tareas",
+    "file": "./util/file-storage-services.json"
+  }
+]
+

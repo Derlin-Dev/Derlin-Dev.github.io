@@ -1,0 +1,115 @@
+{
+  "id": "file-storage-service",
+  "title": "Servicio REST de Almacenamiento de Archivos",
+  "subtitle": "Gestión de archivos y directorios con Spring Boot",
+  "description": "Servicio RESTful desarrollado con Spring Boot que permite subir, descargar, listar y eliminar archivos, así como crear carpetas dentro de un directorio raíz configurable. Implementa validaciones de seguridad para evitar accesos fuera del directorio base y normaliza rutas para proteger el sistema de archivos.",
+
+  "features": [
+    "Subida de múltiples archivos a subcarpetas específicas",
+    "Descarga de archivos mediante URL segura",
+    "Listado del contenido de directorios",
+    "Creación de nuevas carpetas dentro de un directorio padre",
+    "Eliminación recursiva de archivos o carpetas",
+    "Validación de rutas para prevenir accesos fuera del directorio raíz",
+    "Generación de URLs codificadas en UTF-8"
+  ],
+
+  "achievements": [
+    "Implementación segura de acceso al sistema de archivos",
+    "Normalización de rutas para evitar vulnerabilidades",
+    "Gestión recursiva de eliminación de carpetas",
+    "API REST completamente funcional y lista para integrarse en otros sistemas"
+  ],
+
+  "gallery": [
+   "./assets/img/proyecto2.jpg",
+    "./assets/img/proyecto2.jpg",
+    "./assets/img/proyecto2.jpg",
+    "./assets/img/proyecto2.jpg"
+  ],
+
+  "technologies": {
+    "Backend": [
+      "Java 11+",
+      "Spring Boot"
+    ],
+    "Database": [
+      "No aplica (Sistema de archivos local)"
+    ],
+    "Messaging": [
+      "HTTP REST"
+    ]
+  },
+
+  "endpoints": [
+    {
+      "method": "POST",
+      "route": "/media/upload",
+      "description": "Subir múltiples archivos a una subcarpeta",
+      "response": {
+        "status": 200,
+        "data": [
+          {
+            "filename": "documento.pdf",
+            "directory": "proyectos2025",
+            "url": "http://localhost:8080/media/download-file?filename=documento.pdf&directory=proyectos2025"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "route": "/media/download-file",
+      "description": "Descargar un archivo almacenado",
+      "response": {
+        "status": 200,
+        "message": "Archivo descargado correctamente"
+      }
+    },
+    {
+      "method": "GET",
+      "route": "/media/list-directory",
+      "description": "Listar el contenido inmediato de un directorio",
+      "response": {
+        "status": 200,
+        "data": [
+          {
+            "name": "documento.pdf",
+            "url": "http://localhost:8080/media/download-file?filename=documento.pdf&directory=proyectos2025"
+          }
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "route": "/media/create-directory",
+      "description": "Crear una nueva carpeta dentro de un directorio padre",
+      "response": {
+        "status": 201,
+        "message": "Directorio creado correctamente"
+      }
+    },
+    {
+      "method": "DELETE",
+      "route": "/media/delete",
+      "description": "Eliminar un archivo o carpeta de manera recursiva",
+      "response": {
+        "status": 200,
+        "message": "Archivo o carpeta eliminada correctamente"
+      }
+    },
+    {
+      "method": "GET",
+      "route": "/actuator/health",
+      "description": "Health check del servicio",
+      "response": {
+        "status": 200,
+        "service": "file-storage-service",
+        "statusService": "UP"
+      }
+    }
+  ],
+
+  "githubUrl": "https://github.com/Derlin-Dev/storefile--microservice",
+  "demoUrl": "http://localhost:8080"
+}

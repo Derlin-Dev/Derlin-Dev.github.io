@@ -1,0 +1,143 @@
+{
+  "id": "blog-microservicios",
+  "title": "API para plataforma de Blogs con Microservicios",
+  "subtitle": "Arquitectura distribuida con Spring Boot, JWT y Spring Cloud",
+  "description": "API backend para una plataforma de blogs desarrollada con arquitectura de microservicios usando Spring Boot. Implementa autenticación con JWT, API Gateway con Spring Cloud, descubrimiento de servicios con Eureka y configuración centralizada. Cada servicio es independiente, escalable y desplegable con Docker Compose.",
+
+  "features": [
+    "Autenticación y autorización con JWT y Spring Security",
+    "Registro de usuarios",
+    "CRUD completo de publicaciones",
+    "CRUD de comentarios y respuestas",
+    "API Gateway para centralizar las solicitudes",
+    "Descubrimiento de servicios con Eureka Server",
+    "Configuración centralizada con Spring Cloud Config",
+    "Contenerización con Docker y Docker Compose"
+  ],
+
+  "achievements": [
+    "Arquitectura basada en microservicios completamente funcional",
+    "Separación de responsabilidades por servicio (Auth, Post, Comment)",
+    "Despliegue automatizado con Docker Compose",
+    "Implementación de seguridad basada en roles con JWT"
+  ],
+
+  "gallery": [
+    "./assets/img/galerias/proyecto1/main.jpg",
+    "./assets/img/galerias/proyecto1/img1.jpg",
+    "./assets/img/galerias/proyecto1/img2.jpg",
+    "./assets/img/galerias/proyecto1/img3.jpg"
+  ],
+
+  "technologies": {
+    "Backend": [
+      "Java 17+",
+      "Spring Boot",
+      "Spring Security",
+      "Spring Cloud Gateway",
+      "Spring Cloud Eureka",
+      "Spring Cloud Config"
+    ],
+    "Database": [
+      "PostgreSQL"
+    ],
+    "DevOps": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "Messaging": [
+      "HTTP REST"
+    ]
+  },
+
+  "endpoints": [
+    {
+      "method": "POST",
+      "route": "/auth/signup",
+      "description": "Registrar nuevo usuario",
+      "response": {
+        "status": 201,
+        "message": "Usuario registrado correctamente"
+      }
+    },
+    {
+      "method": "POST",
+      "route": "/auth/login",
+      "description": "Autenticación de usuario y generación de token JWT",
+      "response": {
+        "status": 200,
+        "token": "jwt-token"
+      }
+    },
+    {
+      "method": "GET",
+      "route": "/post/get",
+      "description": "Obtener lista de publicaciones",
+      "response": {
+        "status": 200,
+        "data": [
+          {
+            "id": "1",
+            "titulo": "Introducción a Spring Boot",
+            "tag": "SpringBoot"
+          }
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "route": "/post/new",
+      "description": "Crear nueva publicación",
+      "response": {
+        "status": 201,
+        "message": "Publicación creada exitosamente"
+      }
+    },
+    {
+      "method": "GET",
+      "route": "/comment/post/{id}",
+      "description": "Obtener comentarios por publicación",
+      "response": {
+        "status": 200,
+        "comments": [
+          {
+            "id": "1",
+            "comment": "Excelente post",
+            "userId": "4"
+          }
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "route": "/comment/user/new",
+      "description": "Agregar comentario a publicación",
+      "response": {
+        "status": 201,
+        "message": "Comentario creado correctamente"
+      }
+    },
+    {
+      "method": "POST",
+      "route": "/answers/new",
+      "description": "Responder a un comentario",
+      "response": {
+        "status": 201,
+        "message": "Respuesta agregada correctamente"
+      }
+    },
+    {
+      "method": "GET",
+      "route": "/actuator/health",
+      "description": "Health check del servicio",
+      "response": {
+        "status": 200,
+        "service": "microservices-blog-api",
+        "statusService": "UP"
+      }
+    }
+  ],
+
+  "githubUrl": "https://github.com/Derlin-Dev/api-microservices-blogs.v2.git",
+  "demoUrl": "http://localhost:8081"
+}

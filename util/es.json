@@ -1,0 +1,114 @@
+{
+  "header": {
+    "title": "DERLIN-DEV",
+    "nav": {
+      "about": "Sobre mí",
+      "projects": "Proyectos",
+      "skills": "Habilidades",
+      "education": "Educación",
+      "contact": "Contacto"
+    }
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Derlin R. Valera",
+    "title": "Ing. de Software | Desarrollador backend",
+    "available": "Disponible para nuevas oportunidades",
+    "downloadCV": "Descargar CV"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description1": "Mi nombre es Derlin R. Valera. Estudiante de Ingeniería de Software, apasionado por el desarrollo backend y la arquitectura de software. Manejo Java, Spring Boot y diseño de microservicios, con conocimiento en APIs escalables, Spring cloud, autenticación JWT y PostgreSQL. Conocimientos básicos en Docker y despliegue. Busco iniciar en roles de backend para seguir aprendiendo sobre computación en la nube, desarrollo de micrservicios y DevOps.",
+    "stats": {
+      "projects": "Proyectos desarrollados",
+      "viewGithub": "Ver GitHub",
+      "architectures": "Arquitecturas implementadas",
+      "interests": "Intereses",
+      "backend": "Backend",
+      "cloud": "Cloud Computing",
+      "devops": "DevOps"
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "project1": {
+      "name": "API para plataforma de blogs",
+      "description": "Plataforma backend para blogs personales desarrollada con Spring Boot y arquitectura de microservicios.Incluye autenticación con JWT, API Gateway, y gestión de usuarios, posts y comentarios."
+    },
+    "project2": {
+      "name": "API de Gestion de Archivos",
+      "description": "Este proyecto es un servicio RESTful desarrollado en Spring Boot que permite subir, descargar, listar, eliminar archivos y crear carpetas dentro de un directorio raíz configurable. Es útil para sistemas que requieren gestión básica de archivos del lado del servidor."
+    },
+    "project3": {
+      "name": "API Para Plataforma de E-Commence // EN DESARROLLO",
+      "description": "API RESTful para plataforma de comercio electronico"
+    }
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "java": "Java",
+    "springframework": "Spring Boot",
+    "springsecurity": "Spring Security",
+    "jwt": "JWT",
+    "restapis": "REST APIs",
+    "architecture": "Arquitectura de Microservicios",
+    "eventdriven": "Event-Driven Architecture",
+    "postgresql": "PostgreSQL",
+    "SQLServer": "SQL Server",
+    "docker": "Docker",
+    "rabbitmq": "RabbitMQ",
+    "git": "Git",
+    "linux": "linux"
+  },
+  "education": {
+    "title": "Educación",
+    "item1": {
+      "date": "2024 - Presente",
+      "degree": "Software Engineering",
+      "school": "UTECO",
+      "description": "Formación en desarrollo de software, estructuras de datos, arquitectura de sistemas y diseño orientado a objetos.",
+      "tags": ["Architecture", "OOP", "Data Structures"]
+    },
+    "item2": {
+      "date": "Dic 2025 - Feb 2026",
+      "degree": "Cloud Computing Fundamentals",
+      "school": "INDOTEL",
+      "description": "Fundamentos de cloud computing, virtualización, contenedores y arquitectura en la nube.",
+      "tags": ["Cloud", "Containers", "Infrastructure"]
+    },
+    "item3": {
+      "date": "Jul 2023 - Aug 2023",
+      "degree": "IT Technical Support",
+      "school": "CENTU",
+      "description": "Soporte técnico, diagnóstico de hardware y resolución de incidencias en entornos empresariales.",
+      "tags": ["Networking", "Hardware", "Troubleshooting"]
+    },
+    "item4": {
+    "date": "Jul 2023 - Aug 2023",
+    "degree": "Administración de Bases de Datos",
+    "school": "ITLA",
+    "description": "Formación enfocada en modelado relacional, normalización, diseño lógico y físico de bases de datos. Implementación de consultas avanzadas, optimización de rendimiento mediante índices y uso de procedimientos almacenados para automatización de procesos.",
+    "tags": [
+      "Modelado relacional",
+      "Normalización",
+      "SQL avanzado",
+      "Optimización de consultas",
+      "Procedimientos almacenados",
+      "Índices"
+    ]
+  }
+  },
+  "contact": {
+    "title": "Contacto",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "send": "Enviar Mensaje"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Derlin R. Valera"
+  }
+}
