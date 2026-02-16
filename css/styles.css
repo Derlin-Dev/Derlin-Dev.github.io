@@ -47,6 +47,54 @@
     --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
+/* ==========================================================================
+   SECCIÓN EDUCACIÓN: altura fija y disposición en columnas (3 items por columna)
+   ========================================================================== */
+
+.section-educacion-wrapper {}
+
+section#educacion {
+    /* Sin altura fija: permite que el contenido fluya naturalmente */
+    /* Reducimos padding lateral para aumentar el ancho utilizable */
+    padding: var(--spacing-2xl) 6%;
+}
+
+.education-dashboard-card {
+    max-width: 1500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.education-timeline {
+    display: grid;
+    grid-auto-flow: column; /* llenar filas primero, luego crear nuevas columnas */
+    grid-template-rows: repeat(3, auto); /* 3 elementos por columna */
+    gap: var(--spacing-md) var(--spacing-2xl); /* row-gap column-gap */
+    align-items: start;
+}
+
+.edu-item {
+    break-inside: avoid;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Responsive: en pantallas pequeñas revertir a flujo vertical */
+@media (max-width: 900px) {
+    section#educacion {
+        height: auto;
+        max-height: none;
+        padding: var(--spacing-lg) 6%;
+    }
+
+    .education-timeline {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: var(--spacing-md);
+    }
+}
+
 /* Tema claro */
 body.light {
     --bg-color: #f8fafc;
@@ -762,7 +810,7 @@ nav a:hover {
     border-radius: var(--border-radius-md);
     text-align: center;
     transition: var(--transition-base);
-    cursor: pointer;
+    cursor: default; /* evitar apariencia de seleccionable */
 }
 
 .skill-card i {
@@ -779,12 +827,13 @@ nav a:hover {
 }
 
 .skill-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-sm);
+    /* Suave resalte sin movimiento que parezca clickable */
+    background: rgba(255,255,255,0.02);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
 .skill-card:hover i {
-    transform: scale(1.2);
+    color: color-mix(in srgb, var(--accent-color) 70%, var(--text-color));
 }
 
 /* ============================================================================
@@ -796,11 +845,11 @@ nav a:hover {
     margin-left: auto;
     margin-right: auto;
     background: var(--card-color);
-    padding: var(--spacing-xl);
+    padding: calc(var(--spacing-xl) + 10px);
     border-radius: var(--border-radius-xl);
     position: relative;
     overflow: hidden;
-    max-width: 900px;
+    max-width: 1200px; /* aumentado para más ancho utilizable */
     width: 100%;
 }
 
