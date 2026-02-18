@@ -65,15 +65,15 @@
     "item1": {
       "date": "2024 - Presente",
       "degree": "Software Engineering",
-      "school": "UTECO",
-      "description": "Formación en desarrollo de software, estructuras de datos, arquitectura de sistemas y diseño orientado a objetos.",
-      "tags": ["Architecture", "OOP", "Data Structures"]
+      "school": "Universidad tecnologica del cibao orientar (UTECO)",
+      "description": "Formacion enfocada en el diseño y construcción de soluciones de software mediante el uso de lenguajes de programación, modelado de sistemas, gestión de proyectos, pruebas, control de calidad y aplicación de buenas prácticas de ingeniería para garantizar sistemas robustos y mantenibles.",
+      "tags": ["Desarrollo de Software", "Analisis de Sistemas", "Bases de datos","OOP", "Diseño de Arquitectura", "Pruebas y Calidad"]
     },
     "item2": {
       "date": "Dic 2025 - Feb 2026",
       "degree": "Cloud Computing Fundamentals",
       "school": "INDOTEL",
-      "description": "Fundamentos de cloud computing, virtualización, contenedores y arquitectura en la nube.",
+      "description": "Formación en fundamentos de computación en la nube, incluyendo modelos de servicio (IaaS, PaaS, SaaS), despliegue de aplicaciones en entornos cloud, virtualización, contenedores, almacenamiento, redes y conceptos básicos de seguridad y escalabilidad en infraestructuras distribuidas.",
       "tags": ["Cloud", "Containers", "Infrastructure"]
     },
     "item3": {

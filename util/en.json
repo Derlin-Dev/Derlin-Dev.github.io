@@ -61,35 +61,42 @@
     "linux": "linux"
   },
   "education": {
-    "title": "Education",
-    "item1": {
-      "date": "2024 - Present",
-      "degree": "Software Engineering",
-      "school": "UTECO",
-      "description": "Education in software development, data structures, system architecture, and object-oriented design.",
-      "tags": ["Architecture", "OOP", "Data Structures"]
-    },
-    "item2": {
-      "date": "Dec 2025 - Feb 2026",
-      "degree": "Cloud Computing Fundamentals",
-      "school": "INDOTEL",
-      "description": "Fundamentals of cloud computing, virtualization, containers, and cloud architecture.",
-      "tags": ["Cloud", "Containers", "Infrastructure"]
-    },
-    "item3": {
-      "date": "Jul 2023 - Aug 2023",
-      "degree": "IT Technical Support",
-      "school": "CENTU",
-      "description": "Technical support, hardware diagnostics, and incident resolution in business environments.",
-      "tags": ["Networking", "Hardware", "Troubleshooting"]
-    },
-    "item4": {
-      "date": "April 2025 - June 2025",
-      "degree": "Database Administration",
-      "school": "ITLA",
-      "description": "Design, creation, and optimization of scalable databases.",
-      "tags": ["Database Design", "Stored Procedures", "Queries"]
-    }
+  "title": "Education",
+  "item1": {
+    "date": "2024 - Present",
+    "degree": "Software Engineering",
+    "school": "Universidad Tecnologica del Cibao Orientar (UTECO)",
+    "description": "Education focused on the design and development of software solutions through the use of programming languages, system modeling, project management, testing, quality assurance, and the application of engineering best practices to ensure robust and maintainable systems.",
+    "tags": ["Software Development", "Systems Analysis", "Databases", "OOP", "Architecture Design", "Testing and Quality"]
+  },
+  "item2": {
+    "date": "Dec 2025 - Feb 2026",
+    "degree": "Cloud Computing Fundamentals",
+    "school": "INDOTEL",
+    "description": "Training in cloud computing fundamentals, including service models (IaaS, PaaS, SaaS), application deployment in cloud environments, virtualization, containers, storage, networking, and basic concepts of security and scalability in distributed infrastructures.",
+    "tags": ["Cloud", "Containers", "Infrastructure"]
+  },
+  "item3": {
+    "date": "Jul 2023 - Aug 2023",
+    "degree": "IT Technical Support",
+    "school": "CENTU",
+    "description": "Technical support, hardware diagnostics, and incident resolution in business environments.",
+    "tags": ["Networking", "Hardware", "Troubleshooting"]
+  },
+  "item4": {
+    "date": "Apr 2025 - Jun 2025",
+    "degree": "Database Administration",
+    "school": "ITLA",
+    "description": "Training focused on relational modeling, normalization, logical and physical database design. Implementation of advanced queries, performance optimization through indexing, and the use of stored procedures for process automation.",
+    "tags": [
+      "Relational Modeling",
+      "Normalization",
+      "Advanced SQL",
+      "Query Optimization",
+      "Stored Procedures",
+      "Indexes"
+    ]
+  }
   },
   "contact": {
     "title": "Contact",
